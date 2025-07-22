@@ -4,9 +4,9 @@ package accessgrid
 import (
 	"net/http"
 
-	"github.com/Access-Grid/accessgrid-go/client"
-	"github.com/Access-Grid/accessgrid-go/models"
-	"github.com/Access-Grid/accessgrid-go/services"
+	"github.com/Alec-Bailey/accessgrid-go/client"
+	"github.com/Alec-Bailey/accessgrid-go/models"
+	"github.com/Alec-Bailey/accessgrid-go/services"
 )
 
 // Client is the main entry point for the AccessGrid API
@@ -44,6 +44,9 @@ func WithHTTPClient(httpClient *http.Client) client.Option {
 type (
 	// Card represents an NFC key or access pass
 	Card = models.Card
+
+	// CardProvisionResponse
+	CardProvisionResponse = models.CardProvisionResponse
 
 	// ProvisionParams defines parameters for provisioning a new card
 	ProvisionParams = models.ProvisionParams

@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Access-Grid/accessgrid-go/client"
-	"github.com/Access-Grid/accessgrid-go/models"
+	"github.com/Alec-Bailey/accessgrid-go/client"
+	"github.com/Alec-Bailey/accessgrid-go/models"
 )
 
 func setupConsoleTestServer() (*httptest.Server, *ConsoleService) {

@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/Access-Grid/accessgrid-go/client"
-	"github.com/Access-Grid/accessgrid-go/models"
+	"github.com/Alec-Bailey/accessgrid-go/client"
+	"github.com/Alec-Bailey/accessgrid-go/models"
 )
 
 // AccessCardsService handles operations related to NFC cards
@@ -21,13 +21,13 @@ func NewAccessCardsService(client *client.Client) *AccessCardsService {
 }
 
 // Provision creates a new NFC key/card
-func (s *AccessCardsService) Provision(ctx context.Context, params models.ProvisionParams) (*models.Card, error) {
-	var card models.Card
-	err := s.client.Request(ctx, http.MethodPost, "/v1/key-cards", params, &card)
+func (s *AccessCardsService) Provision(ctx context.Context, params models.ProvisionParams) (*models.CardProvisionResponse, error) {
+	var res models.CardProvisionResponse
+	err := s.client.Request(ctx, http.MethodPost, "/v1/key-cards", params, &res)
 	if err != nil {
 		return nil, fmt.Errorf("error provisioning card: %w", err)
 	}
-	return &card, nil
+	return &res, nil
 }
 
 // Update updates an existing NFC key/card
