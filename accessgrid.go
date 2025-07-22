@@ -4,9 +4,9 @@ package accessgrid
 import (
 	"net/http"
 
-	"github.com/Access-Grid/accessgrid-go/client"
-	"github.com/Access-Grid/accessgrid-go/models"
-	"github.com/Access-Grid/accessgrid-go/services"
+	"github.com/Alec-Bailey/accessgrid-go/client"
+	"github.com/Alec-Bailey/accessgrid-go/models"
+	"github.com/Alec-Bailey/accessgrid-go/services"
 )
 
 // Client is the main entry point for the AccessGrid API
